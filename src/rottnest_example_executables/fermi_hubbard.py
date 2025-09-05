@@ -1,6 +1,6 @@
 from rottnest.executables.t_rz_executable import T_RZ_RottnestExecutable
 
-from rottnest.executables import fermi_hubbard_rigetti 
+from . import fermi_hubbard_rigetti 
 
 from pyLIQTR.ProblemInstances.getInstance import getInstance
 from pyLIQTR.clam.lattice_definitions import SquareLattice
