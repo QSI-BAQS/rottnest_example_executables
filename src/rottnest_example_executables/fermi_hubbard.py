@@ -8,7 +8,7 @@ from pyLIQTR.BlockEncodings.getEncoding import getEncoding, VALID_ENCODINGS
 from pyLIQTR.qubitization.qsvt_dynamics import qsvt_dynamics, simulation_phases
 
 from . import fermi_hubbard_rigetti 
-from . import fermi_hubbard_hashes
+#from . import fermi_hubbard_hashes
 
 class FermiHubbard(T_RZ_RottnestExecutable):
     '''
@@ -45,21 +45,24 @@ class FermiHubbard(T_RZ_RottnestExecutable):
         '''
             Hash functions for pyliqtr objects
         '''
-        return fermi_hubbard_hashes.pyliqtr_hashes
+        return {}
+        #return fermi_hubbard_hashes.pyliqtr_hashes
 
     @classmethod
     def qualtran_patchers(cls) -> dict: 
         '''
             Hash functions for quatlran objects
         '''
-        return fermi_hubbard_hashes.qualtran_hashes
+        return {}
+        #return fermi_hubbard_hashes.qualtran_hashes
 
     @classmethod
     def cirq_patchers(cls) -> dict:
         '''
             Hash functions for cirq objects
         '''
-        return fermi_hubbard_hashes.cirq_hashes
+        return {}
+        #return fermi_hubbard_hashes.cirq_hashes
 
 
 
