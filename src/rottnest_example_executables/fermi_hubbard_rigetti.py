@@ -24,6 +24,10 @@ or implied. See the License for the specific language governing permissions and 
 the License.
 '''
 
+'''
+    Elements of this file were changed by Alan Robertson
+'''
+
 # pyLIQTR 1.3.3
 from pyLIQTR.ProblemInstances.getInstance import getInstance
 from pyLIQTR.clam.lattice_definitions import SquareLattice
@@ -31,7 +35,7 @@ from pyLIQTR.BlockEncodings.getEncoding import getEncoding, VALID_ENCODINGS
 from pyLIQTR.qubitization.qsvt_dynamics import qsvt_dynamics, simulation_phases
 
 # The following functions are injected back into the Fermi Hubbard class object
-# They have been separated into this file forclarity for licensing reasons
+# They have been separated into this file for clarity for licensing reasons
 
 def make_fh_circuit(self):
     """
@@ -39,9 +43,7 @@ def make_fh_circuit(self):
     """
 
     # Create Fermi-Hubbard Instance
-    J = -1.0
-    U = 2.0
-    model = getInstance("FermiHubbard", shape=(self.N, self.N), J=J, U=U, cell=SquareLattice)
+    model = getInstance(self.instance_name, shape=(self.N, self.N), J=self.J, U=self.U, cell=SquareLattice)
     return self._make_qsvt_circuit(
         model,
         encoding=getEncoding(VALID_ENCODINGS.PauliLCU)
