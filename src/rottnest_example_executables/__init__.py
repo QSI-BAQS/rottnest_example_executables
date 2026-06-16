@@ -3,12 +3,14 @@
 from .fermi_hubbard import FermiHubbard
 from .fermi_hubbard_nnn import FermiHubbardNNN
 from .heisenberg import Heisenberg 
+from .transverse_field_ising import TransverseFieldIsing
 
 
 rottnest_executables = [
     FermiHubbard,
     Heisenberg,
-    FermiHubbardNNN
+    FermiHubbardNNN,
+    TransverseFieldIsing
 ]
 
 try:
